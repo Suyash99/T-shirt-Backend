@@ -54,18 +54,20 @@ const userSchema = new mongoose.Schema({
   }, {timestamps: true}
   );
 
-  userSchema.virtual("password")
-        .set(function(password){
+// Encrypting Password
+
+userSchema.virtual("password")
+          .set(function(password){
             this._Password = password
             this.salt = uuidv4();
             this.oPassword = password;
             this.encry_Password = this.securePassword(password);
         })
-        .get(function(){
+          .get(function(){
             return this._Password
         })
 
-  userSchema.methods = {
+userSchema.methods = {
     authenticate: function(plainpassword){
         return this.securePassword(plainpassword) === this.encry_Password;
     },

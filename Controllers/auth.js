@@ -55,7 +55,7 @@ exports.signin = (req, res) => {
         })
     }
 
-    //Creating Token
+    //Creating JWToken
     const token = jwt.sign({id: user._id}, process.env.SECRET)
 
     //Put token in the cookie
@@ -75,7 +75,7 @@ exports.signout = (req, res) =>{
     })
 }
 
-//Protected Routes
+//Protected Routes(Additional option JWT)
 exports.isSignedIn = expressJwt({
     secret: process.env.SECRET,
     userProperty: "auth"

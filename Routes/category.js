@@ -9,7 +9,7 @@ const {isAuthenticated, isAdmin, isSignedIn} = require("../Controllers/auth")
 router.param("userId", getUserById)
 router.param("categoryId", getCategoryById)
 
-//Actual Routes
+//Actual Routes(CRUD)
 
 //create 
 router.post("/category/create/:userId", isSignedIn, isAuthenticated, isAdmin, createCategory)

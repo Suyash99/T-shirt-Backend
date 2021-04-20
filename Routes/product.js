@@ -18,18 +18,18 @@ const{getUserById} = require("../Controllers/user")
 router.param("userId", getUserById)
 router.param("productId", getProductById)
 
-//All of actual routes
-//Create Route
+//All of actual routes(CRUD)
+//Create 
 router.post("/product/create/:userId", isSignedIn, isAuthenticated, isAdmin, createProduct)
 
-//Read Route
+//Read 
 router.get("/product/:productId", getProduct)
 router.get("/product/photo/:productId", photo)
 
-//Delete Route
+//Delete 
 router.delete("/product/:productId/:userId", isSignedIn, isAuthenticated, isAdmin, deleteProduct)
 
-//Update Route
+//Update 
 router.put("/product/:productId/:userId", isSignedIn, isAuthenticated, isAdmin, updateProduct)
 
 //Listing Route
