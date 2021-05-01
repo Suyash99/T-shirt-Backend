@@ -40,6 +40,11 @@ app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 
+//Basic route for testing
+app.get("/", async (req, res) => {
+  res.send("We got the basic route working")
+});
+
 //PORT
 const port = process.env.PORT || 8000;
 
