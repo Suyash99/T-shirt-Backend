@@ -41,9 +41,9 @@ app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 
 //PORT
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 //Starting Server
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
   console.log(`App is running at http://localhost:${port}`);
 });
