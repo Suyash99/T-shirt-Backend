@@ -12,6 +12,7 @@ const userRoutes = require("./Routes/user");
 const categoryRoutes = require("./Routes/category");
 const productRoutes = require("./Routes/product");
 const orderRoutes = require("./Routes/order");
+const stripePayment = require("./Routes/stripePayment");
 
 //DB Connection
 mongoose
@@ -39,6 +40,7 @@ app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
+app.use("/api", stripePayment);
 
 //Basic route for testing
 app.get("/", async (req, res) => {
