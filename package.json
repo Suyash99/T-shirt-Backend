@@ -4,13 +4,14 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "RUNNING_ENV=PRODUCTION node your-app.js",
-    "test":"RUNNING_ENV=DEVELOPMENT node your-app.js"
+    "start": "RUNNING_ENV=PRODUCTION node app.js",
+    "test": "RUNNING_ENV=DEVELOPMENT node app.js"
   },
   "keywords": [],
   "author": "Suyash Kumar",
   "license": "ISC",
   "dependencies": {
+    "@netlify/functions": "^2.4.1",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
