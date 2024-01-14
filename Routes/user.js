@@ -12,7 +12,7 @@ const { isSignedIn, isAuthenticated, isAdmin } = require("../Controllers/auth");
 //Param
 router.param("userId", getUserById);
 
-//Create User
+//Get User
 router.get("/user/:userId", isSignedIn, isAuthenticated, getUser);
 
 //Update User

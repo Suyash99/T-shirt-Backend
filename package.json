@@ -4,28 +4,29 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "RUNNING_ENV=PRODUCTION node your-app.js",
+    "test":"RUNNING_ENV=DEVELOPMENT node your-app.js"
   },
   "keywords": [],
   "author": "Suyash Kumar",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "dotenv": "^8.6.0",
+    "express": "^4.18.2",
     "express-jwt": "^5.3.1",
-    "express-validator": "^6.2.0",
-    "formidable": "^1.2.1",
-    "i": "^0.3.6",
+    "express-validator": "^6.15.0",
+    "formidable": "^1.2.6",
+    "i": "^0.3.7",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
-    "mongoose": "^5.7.7",
+    "mongoose": "^5.13.22",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.4",
-    "npm": "^6.13.0",
-    "stripe": "^8.146.0",
+    "npm": "^6.14.18",
+    "stripe": "^8.222.0",
     "uuid": "^3.3.3"
   }
 }
