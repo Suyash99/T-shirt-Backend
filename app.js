@@ -16,7 +16,6 @@ const categoryRoutes = require("./Routes/category");
 const productRoutes = require("./Routes/product");
 const orderRoutes = require("./Routes/order");
 const stripePayment = require("./Routes/stripePayment");
-const adminRoutes = require('./Routes/admin')
 
 //DB Connection
 mongoose
@@ -39,7 +38,6 @@ app.use(cookieParser());
 app.use(cors());
 
 //My Routes
-app.use("/api/admin", adminRoutes);
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
